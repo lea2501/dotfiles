@@ -33,10 +33,10 @@ fi
 picom -b --config ~/.picom.conf
 #volumeicon &
 #xsetroot -solid '#9400D3' &
-#xsetroot -solid '#000000' &
+xsetroot -solid '#000000' &
 #feh --bg-scale ~/pictures/wallpapers/rainbow-wallpaper-desktop_3080151.png
 #feh --bg-scale ~/pictures/wallpapers/680-summer-forest-after-the-rain_dark.jpg &
-feh --bg-scale ~/pictures/wallpapers/programming_doom_code_1920x1080_wallpaper_Wallpaper_HD_2560x1440_www.paperhi.com-violet.jpg &
+#feh --bg-scale ~/pictures/wallpapers/programming_doom_code_1920x1080_wallpaper_Wallpaper_HD_2560x1440_www.paperhi.com-violet.jpg &
 #feh --bg-scale ~/pictures/wallpapers/8f00ff.png &
 #feh --bg-scale ~/pictures/wallpapers/9400d3.png &
 #xbindkeys &
@@ -68,5 +68,5 @@ setxkbmap -layout latam -variant deadtilde
 #exec startxfce4
 #exec startlxde
 #exec i3
-exec ~/bin/startdwm
+exec ~/script/startdwm
 #exec dwm
