@@ -1,21 +1,3 @@
-" Specify a directory for plugins
-" " - For Neovim: stdpath('data') . '/plugged'
-" " - Avoid using standard Vim directory names like 'plugin'
-call plug#begin('~/.vim/plugged')
-Plug 'scrooloose/nerdtree'
-Plug 'tpope/vim-surround'
-Plug 'scrooloose/syntastic'
-Plug 'vim-airline/vim-airline'
-Plug 'scrooloose/nerdcommenter'
-Plug 'majutsushi/tagbar'
-Plug 'ekalinin/dockerfile.vim'
-Plug 'elzr/vim-json'
-Plug 'w0rp/ale'
-Plug 'flazz/vim-colorschemes'
-
-" Initialize plugin system
-call plug#end()
-
 set number
 set showmatch
 set visualbell
