@@ -8,3 +8,4 @@ alias getBattBrief='upower -i /org/freedesktop/UPower/devices/battery_BAT0 | gre
 alias getBattPercent="upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep 'percentage' | awk '{print $2}'":
 alias getAudioMaster="amixer sget Master | grep 'Right:' | awk -F'[][]' '{print $2}'"
 alias dim="echo $(tput cols)x$(tput lines)"
+alias systemstats='echo "== Disks ==" && df -h && echo "== Memory ==" && free -h && echo "== CPU ==" && cat /proc/cpuinfo | grep "cpu MHz" && echo "== TEMP ==" && sensors | grep "°C"'

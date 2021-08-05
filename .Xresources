@@ -2,12 +2,14 @@
 xterm*utf8: 1
 
 ! Use a nice truetype font and size by default... 
+!xterm*faceName: monospace:pixelsize=14
+xterm*faceName: Liberation Mono:pixelsize=12:antialias=true:autohint=true
 !XTerm*font: -*-terminus-medium-*-*-*-18-*-*-*-*-*-iso10646-1
 !xterm*font: -xos4-*-*-*-*-*-20-*-*-*-*-*-iso10646-1
 !xterm*faceName: DejaVu Sans Mono
 !xterm*faceSize: 11
-xterm*faceName: Bitstream Vera Serif Mono
-xterm*faceSize: 14
+!xterm*faceName: Bitstream Vera Serif Mono
+!xterm*faceSize: 12
 
 ! Every shell is a login shell by default (for inclusion of all necessary environment variables)
 xterm*loginshell: true
@@ -19,8 +21,10 @@ xterm*savelines: 10000
 xterm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
 
 ! DOS-box colours...
-xterm*foreground: rgb:DC/DC/DC
-xterm*background: rgb:2C/2C/2C
+!xterm*foreground: rgb:DC/DC/DC
+!xterm*background: rgb:00/00/00
+xterm*background: black
+xterm*foreground: lightgray
 xterm*color0: rgb:00/00/00
 xterm*color1: rgb:a8/00/00
 xterm*color2: rgb:00/a8/00
@@ -40,7 +44,7 @@ xterm*color15: rgb:fc/fc/fc
 
 ! right hand side scrollbar...
 xterm*rightScrollBar: true
-xterm*ScrollBar: true
+xterm*ScrollBar: false
 
 ! stop output to terminal from jumping down to bottom of scroll again
 xterm*scrollTtyOutput: false
@@ -59,10 +63,12 @@ xterm*selectToClipboard: true
 !Ctrl Shift <Key>V: insert-selection(CLIPBOARD)
 !Alt Shift <Key>C: copy-selection(CLIPBOARD) \n\
 !Alt Shift <Key>V: insert-selection(CLIPBOARD)
+!Meta Shift <Key>C: copy-selection(CLIPBOARD) \n\
+!Meta Shift <Key>V: insert-selection(CLIPBOARD)
 
 xterm.vt100.translations: #override \n\
-    Meta Shift <Key>C: copy-selection(CLIPBOARD) \n\
-    Meta Shift <Key>V: insert-selection(CLIPBOARD)
+    Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
+    Ctrl Shift <Key>V: insert-selection(CLIPBOARD)
 
 !XTerm*VT100.Translations: #override \n\
 !    Shift Ctrl<Key>V: insert-selection(CLIPBOARD) \n\
