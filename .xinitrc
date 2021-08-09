@@ -37,9 +37,9 @@ picom -b --config ~/.picom.conf
 #feh --bg-scale ~/pictures/wallpapers/rainbow-wallpaper-desktop_3080151.png
 #feh --bg-scale ~/pictures/wallpapers/680-summer-forest-after-the-rain_dark.jpg &
 #feh --bg-scale ~/pictures/wallpapers/programming_doom_code_1920x1080_wallpaper_Wallpaper_HD_2560x1440_www.paperhi.com-violet.jpg &
+feh --bg-scale ~/pictures/wallpapers/wallpaper_black.jpg
 #feh --bg-scale ~/pictures/wallpapers/8f00ff.png &
 #feh --bg-scale ~/pictures/wallpapers/9400d3.png &
-feh --bg-scale ~/pictures/wallpapers/wallpaper_black.jpg
 #xbindkeys &
 #autocutsel -fork &
 autocutsel -selection PRIMARY -fork &
@@ -71,5 +71,7 @@ setxkbmap -layout latam -variant deadtilde
 #exec startxfce4
 #exec startlxde
 #exec i3
-exec ~/src/scripts/startdwm
+#exec ~/script/startdwm
 #exec dwm
+#exec fluxbox
+exec cwm
