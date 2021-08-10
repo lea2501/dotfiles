@@ -29,6 +29,7 @@ unbind-key	MS-Tab
 bind-key	M-Tab				window-cycle-ingroup
 bind-key	MS-Tab				window-rcycle-ingroup
 
+unbind-key      M-Return
 unbind-key	CM-l
 bind-key	MS-l				lock
 bind-key	MC-Return			terminal
