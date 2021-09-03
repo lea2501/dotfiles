@@ -31,6 +31,8 @@ bind-key	MS-Tab				window-rcycle-ingroup
 
 unbind-key      MC-x
 bind-key        MS-x                            window-close
+unbind-key      MC-m
+bind-key        MS-m                            window-maximize
 unbind-key	MS-w
 bind-key	MS-w				menu-window
 bind-key	MS-p				menu-exec
@@ -46,7 +48,7 @@ bind-key	MS-l				slock
 bind-key	MS-Return			"st -f 'Dejavu sans mono:pixelsize=12:antialias=true:autohint=false' -g 80x24"
 bind-key	MCS-Return			"st -f 'Dejavu sans mono:pixelsize=32:antialias=true:autohint=false' -g 80x24"
 #bind-key	MS-Return			xterm -fa 'Monospace' -fs 20 +sb
-bind-key	MS-Return			"st -f 'Dejavu sans mono:pixelsize=24:antialias=true:autohint=false' -g 80x24"
+bind-key	MC-Return			"st -f 'Dejavu sans mono:pixelsize=24:antialias=true:autohint=false' -g 80x24"
 bind-key        MS-F5                           "amixer -q sset Master 5%-"
 bind-key        MS-F6                           "amixer -q sset Master 5%+"
 
