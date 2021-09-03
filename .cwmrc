@@ -29,13 +29,15 @@ unbind-key	MS-Tab
 bind-key	M-Tab				window-cycle-ingroup
 bind-key	MS-Tab				window-rcycle-ingroup
 
+unbind-key      MC-x
+bind-key        MS-x                            window-close
 unbind-key	MS-w
 bind-key	MS-w				menu-window
 bind-key	MS-p				menu-exec
 unbind-key      MS-o
 bind-key        MS-o                            "./src/scripts/dmenu_bookmarks.sh"
-unbind-key      MS-o
-bind-key        MS-o                            "./src/scripts/dmenu_bookmarks_noscript.sh"
+unbind-key      MC-o
+bind-key        MC-o                            "./src/scripts/dmenu_bookmarks_noscript.sh"
 
 unbind-key      M-Return
 unbind-key	MS-l
