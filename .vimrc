@@ -1,3 +1,7 @@
+" Specify a directory for plugins
+" " - For Neovim: stdpath('data') . '/plugged'
+" " - Avoid using standard Vim directory names like 'plugin'
+
 set number
 set showmatch
 set visualbell
@@ -12,6 +16,8 @@ set ruler
 
 set undolevels=1000
 set backspace=indent,eol,start
+
+set expandtab!
 
 "set spell
 "set spelllang=en,es

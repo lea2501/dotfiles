@@ -3,5 +3,4 @@
 #
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
-
 setxkbmap -layout latam -variant deadtilde
