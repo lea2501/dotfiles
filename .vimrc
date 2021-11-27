@@ -17,10 +17,14 @@ set ruler
 set undolevels=1000
 set backspace=indent,eol,start
 
+set background=dark
+
 set expandtab!
 
 "set spell
 "set spelllang=en,es
+
+set pastetoggle=<F3>
 
 filetype indent on
 filetype plugin on

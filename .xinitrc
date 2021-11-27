@@ -30,9 +30,11 @@ fi
 #fi
 
 # start some nice programs
-#picom -b --config ~/.picom.conf
+picom -b --config ~/.picom.conf
 #volumeicon &
+./src/scripts/setWallpaperSolid.sh "#8E00FF" &
 #xsetroot -solid '#9400D3' &
+#xsetroot -solid '#6a329f' &
 #xsetroot -solid '#000000' &
 #feh --bg-scale ~/pictures/wallpapers/rainbow-wallpaper-desktop_3080151.png &
 #feh --bg-scale ~/pictures/wallpapers/680-summer-forest-after-the-rain_dark.jpg &
@@ -40,11 +42,12 @@ fi
 #feh --bg-scale ~/pictures/wallpapers/8f00ff.png &
 #feh --bg-scale ~/pictures/wallpapers/9400d3.png &
 #feh --bg-scale ~/pictures/wallpapers/wallpaper_black.jpg &
-feh --bg-scale ~/pictures/wallpapers/wallpaper_00610_peace_2560x1600.jpg &
+#feh --bg-scale ~/pictures/wallpapers/wallpaper_00610_peace_2560x1600.jpg &
 #feh --bg-scale $(find ~/pictures/wallpapers/*.* -type f | shuf -n 1) &
 #xbindkeys &
 #autocutsel -fork &
 autocutsel -selection PRIMARY -fork &
+syncthing --no-browser &
 
 #if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 # for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do

@@ -1,0 +1,26 @@
+#article-sort-order date-desc
+browser "firefox-esr %u"
+#browser "badwolf %u"
+#browser "surf -bdfgIS %u"
+#browser "surf -bdfgIs %u"
+#browser "firefox -P noJs %u"
+#browser "netsurf %u"
+#browser "w3m -o auto_image=TRUE %u"
+history-limit 0
+#html-renderer "lynx -dump -T text/html"
+keep-articles-days 14
+max-items 100
+#pager "less %f"
+show-read-articles yes
+text-width 80
+reload-threads 100
+#color background          white   black
+#color listnormal          white   black
+#color listfocus           yellow  blue   bold
+#color listfocus           white   magenta  bold
+#color listnormal_unread   magenta black
+#color listnormal_unread   white   black
+#color listfocus_unread    magenta blue   bold
+#color listfocus_unread    white   magenta  bold
+#color info                white   magenta  bold
+#color article             white   black

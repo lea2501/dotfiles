@@ -1,0 +1,29 @@
+contrast 1.5
+1.2
+contrast 1.2
+gamma 1.1
+r_scale 3
+r_scale 4
+r_scale 1
+gamma 1.1
+contrast 1.1
+gamma 1.0
+contrast 1.1
+gamma 1.1
+contrast 1.1
+contrast 1.2
+gamma 1.2
+gamma 1.1
+contrast 1.1
+gamma
+map start
+noclip
+map start
+noclip
+exit
+quit
+map purifier
+noclip
+god
+map udob1
+gamma
