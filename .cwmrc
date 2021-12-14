@@ -40,6 +40,8 @@ unbind-key      MS-o
 bind-key        MS-o                            "./src/scripts/dmenu_bookmarks.sh"
 unbind-key      MC-o
 bind-key        MC-o                            "./src/scripts/dmenu_bookmarks_noscript.sh"
+unbind-key      MS-k
+bind-key        MS-k                            "passmenu -fn monospace:size=10 -nb '#000000' -nf '#ff00f0' -sb '#8f00ff' -sf '#eeeeee'"
 
 unbind-key      M-Return
 unbind-key	MS-l

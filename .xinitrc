@@ -32,7 +32,8 @@ fi
 # start some nice programs
 picom -b --config ~/.picom.conf
 #volumeicon &
-./src/scripts/setWallpaperSolid.sh "#8E00FF" &
+#./src/scripts/setWallpaperSolid.sh "#8E00FF" &
+./src/scripts/setWallpaperRandomPicture.sh &
 #xsetroot -solid '#9400D3' &
 #xsetroot -solid '#6a329f' &
 #xsetroot -solid '#000000' &

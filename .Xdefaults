@@ -26,8 +26,16 @@ xterm*visualBell:  false
 ! DOS-box colours...
 !xterm*foreground: rgb:DC/DC/DC
 !xterm*background: rgb:00/00/00
+!xterm*foreground: rgb:DC/DC/DC
+!xterm*background: rgb:2B/2B/2B
 xterm*background: black
 xterm*foreground: lightgray
+!xterm*background: #222c2e
+!xterm*foreground: #dee2e3
+!xterm*foreground: #B0B0B0
+!xterm*background: #282828
+!xTerm*background: #222222
+!xTerm*foreground: #cccccc
 xterm*color0: rgb:00/00/00
 xterm*color1: rgb:a8/00/00
 xterm*color2: rgb:00/a8/00
