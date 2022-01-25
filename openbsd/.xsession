@@ -22,4 +22,10 @@ picom &
 # start syncthing
 #syncthing --no-browser &
 
+# Set keyboard
+setxkbmap -layout latam -variant deadtilde
+
+# Set PATH
+PATH=/home/lea/bin/:/home/lea/src/scripts/:$PATH
+
 cwm
