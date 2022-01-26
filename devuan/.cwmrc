@@ -1,0 +1,108 @@
+# KEYBINDINGS:
+# 4 = mod (windows key)
+# S = shift
+# C = control
+# M = meta (alt)
+
+# Autogroups for windows.
+#autogroup	0				xconsole,XConsole
+#autogroup	0				"termbar,termbar"
+autogroup	1				"xterm,XTerm"
+autogroup	2				"Navigator,Firefox"
+autogroup	3				"chromium,Chromium"
+autogroup	5				"jetbrains-idea-ce,jetbrains-idea-ce"
+autogroup	7				"JDownloader,JDownloader"
+
+# Add missing keybindings.
+#bind-key	C-Up				pointer-move-up
+#bind-key	C-Down				pointer-move-down
+#bind-key	C-Right				pointer-move-right
+#bind-key	C-Left				pointer-move-left
+
+#bind-key	CS-Up				pointer-move-up-big
+#bind-key	CS-Down				pointer-move-down-big
+#bind-key	CS-Right			pointer-move-right-big
+#bind-key	CS-Left				pointer-move-left-big
+
+unbind-key	M-Tab
+unbind-key	MS-Tab
+bind-key	M-Tab				window-cycle-ingroup
+bind-key	MS-Tab				window-rcycle-ingroup
+
+unbind-key      MC-x
+bind-key        MS-x                            window-close
+unbind-key      MC-m
+bind-key        MS-m                            window-maximize
+unbind-key	MS-w
+bind-key	MS-w				menu-window
+bind-key	MS-p				menu-exec
+unbind-key      MS-o
+bind-key        MS-o                            "./src/scripts/dmenu_bookmarks.sh"
+unbind-key      MC-o
+bind-key        MC-o                            "./src/scripts/dmenu_bookmarks_noscript.sh"
+unbind-key      MS-k
+bind-key        MS-k                            "passmenu -fn monospace:size=10 -nb '#000000' -nf '#ff00f0' -sb '#8f00ff' -sf '#eeeeee'"
+
+unbind-key      M-Return
+unbind-key	MS-l
+bind-key	MS-l				slock
+#bind-key	MC-Return			terminal
+bind-key	MS-Return			"st -f 'Dejavu sans mono:pixelsize=12:antialias=true:autohint=false' -g 80x24"
+bind-key	MCS-Return			"st -f 'Dejavu sans mono:pixelsize=32:antialias=true:autohint=false' -g 80x24"
+#bind-key	MS-Return			xterm -fa 'Monospace' -fs 20 +sb
+bind-key	MC-Return			"st -f 'Dejavu sans mono:pixelsize=24:antialias=true:autohint=false' -g 80x24"
+bind-key        MS-F5                           "amixer -q sset Master 5%-"
+bind-key        MS-F6                           "amixer -q sset Master 5%+"
+bind-key	MS-F11	        		"scrot"
+bind-key	MS-F12	        		"scrot -s -f"
+bind-key        MS-w                            "surf -bdfgIS www.startpage.com"
+
+bind-key	4-1				group-only-1
+bind-key	4-2				group-only-2
+bind-key	4-3				group-only-3
+bind-key	4-4				group-only-4
+bind-key	4-5				group-only-5
+bind-key	4-6				group-only-6
+bind-key	4-7				group-only-7
+bind-key	4-8				group-only-8
+bind-key	4-9				group-only-9
+
+bind-key        MS-1                            window-movetogroup-1
+bind-key        MS-2                            window-movetogroup-2
+bind-key        MS-3                            window-movetogroup-3
+bind-key        MS-4                            window-movetogroup-4
+bind-key        MS-5                            window-movetogroup-5
+bind-key        MS-6                            window-movetogroup-6
+bind-key        MS-7                            window-movetogroup-7
+bind-key        MS-8                            window-movetogroup-8
+bind-key        MS-9                            window-movetogroup-9
+
+#bind-mouse	M-2				window-lower
+#bind-mouse	M-3				window-resize
+
+## Windows
+borderwidth					2
+color		activeborder			'#8f00ff'
+color		font				'#e53fe5'
+color		selfont				'#000000'
+color		inactiveborder			'#ff00f0'
+color		menubg				'#000000'
+color		menufg				'#ff00f0'
+
+fontname					"monospace:size=10"
+
+#gap						top bottom left right
+gap						2 0 0 0
+
+#ignore						"xconsole"
+#ignore						"termbar"
+
+#command		xterm				"xterm -fa 'Monospace' -fs 10 +sb"
+#command		xterm-big			"xterm -fa 'Monospace' -fs 20 +sb"
+command		firefox-esr			"firefox-esr"
+command		chromium			"chromium"
+command		slock				"slock"
+
+#moveamount					4
+snapdist					25
+sticky						yes
