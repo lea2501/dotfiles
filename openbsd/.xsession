@@ -28,4 +28,7 @@ setxkbmap -layout latam -variant deadtilde
 # Set PATH
 PATH=/home/lea/bin/:/home/lea/src/scripts/:$PATH
 
+# start x11 vnc server
+x11vnc -wait 20 -display :0 -passwd x1103424528 -forever -noxdamage -o ~/x11vnc.log -bg
+
 cwm
