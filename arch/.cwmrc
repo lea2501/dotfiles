@@ -92,7 +92,7 @@ color		menufg				'#ff00f0'
 fontname					"monospace:size=10"
 
 #gap						top bottom left right
-gap						2 0 0 0
+gap						5 5 0 0
 
 #ignore						"xconsole"
 #ignore						"termbar"
@@ -104,5 +104,5 @@ command		chromium			"chromium"
 command		slock				"slock"
 
 #moveamount					4
-snapdist					25
+snapdist					15
 sticky						yes
