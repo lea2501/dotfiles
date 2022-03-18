@@ -63,10 +63,10 @@ autocutsel -selection PRIMARY -fork &
 
 # dwm status
 # Statusbar loop
-#while true; do
-#   xsetroot -name "$( date +"%Y-%m-%d %H:%M" )"
-#   sleep 1m    # Update time every minute
-#done &
+while true; do
+   xsetroot -name "$( date +"%Y-%m-%d %H:%M" )"
+   sleep 1m    # Update time every minute
+done &
 
 # Fixing misbehaving Java applications
 wmname compiz
@@ -77,6 +77,6 @@ setxkbmap -layout latam -variant deadtilde
 #exec startxfce4
 #exec startlxde
 #exec i3
-#exec ~/src/scripts/startdwm
+exec ~/src/scripts/startdwm
 #exec dwm
-exec cwm
+#exec cwm
