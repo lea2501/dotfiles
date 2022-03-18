@@ -29,12 +29,12 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class		instance    title       tags mask     isfloating   monitor */
-	{ "scrcpy",		NULL,       NULL,       0,            1,           -1 },
-	{ "Tor Browser",	NULL,       NULL,       0,            1,           -1 },
-	{ "firefox",		NULL,       NULL,       1 << 1,       0,           -1 },
+	/* class                instance    title       tags mask     isfloating   monitor */
+	{ "Tor Browser",	NULL,       NULL,       1 << 1,       0,           -1 },
+	{ "Mozilla Firefox",	NULL,       NULL,       1 << 1,       0,           -1 },
 	{ "keepassxc",		NULL,       NULL,       1 << 1,       0,           -1 },
 	{ "Chromium",		NULL,       NULL,       1 << 2,       0,           -1 },
+	{ "scrcpy",		NULL,       NULL,       1 << 3,       0,           -1 },
 	{ "jetbrains-idea-ce",	NULL,       NULL,       1 << 4,       0,           -1 },
 	{ "JDownloader",	NULL,       NULL,       1 << 6,       0,           -1 },
 	{ "Transmission-gtk",	NULL,       NULL,       1 << 6,       0,           -1 },
@@ -46,6 +46,7 @@ static const Rule rules[] = {
 static const float mfact     = 0.50; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
+static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
@@ -68,24 +69,32 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_black, "-nf", col_pink, "-sb", col_violet, "-sf", col_gray4, NULL };
-static const char *termcmd[]  = { "st", "-f", "Bitstream vera sans mono:pixelsize=12:antialias=true:autohint=false", NULL };
-static const char *termcmdalt[]  = { "st", "-f", "Bitstream vera sans mono:pixelsize=36:antialias=true:autohint=false", NULL };
+static const char *termcmd[]  = { "st", "-f", "Dejavu sans mono:pixelsize=12:antialias=true:autohint=false", NULL };
+static const char *termcmdalt[]  = { "st", "-f", "Dejavu sans mono:pixelsize=36:antialias=true:autohint=false", NULL };
 static const char *amixerdown[] = { "amixer", "-q", "sset", "Master", "5%-", NULL };
 static const char *amixerup[] = { "amixer", "-q", "sset", "Master", "5%+", NULL };
 static const char *brightnessdown[] = { "brightnessctl", "set", "5%-", NULL };
 static const char *brightnessup[] = { "brightnessctl", "set", "+5%", NULL };
 static const char *lock[] = { "slock", NULL };
+static const char *scrot[] = { "scrot", "-s", "-f", NULL };
+static const char *dmenubookmarks[] = { "./src/scripts/dmenu_bookmarks.sh", NULL };
+static const char *dmenubookmarksnoscript[] = { "./src/scripts/dmenu_bookmarks_noscript.sh", NULL };
+static const char *browser[] = { "surf", "-bdfgIS", "www.startpage.com", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
-	{ MODKEY,			XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY|ControlMask,		XK_Return, spawn,          {.v = termcmdalt } },
+	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = dmenucmd } },
+	{ MODKEY|ShiftMask,				XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY|ShiftMask|ControlMask,		XK_Return, spawn,          {.v = termcmdalt } },
 	{ MODKEY|ShiftMask,             XK_F5,     spawn,          {.v = amixerdown } },
 	{ MODKEY|ShiftMask,             XK_F6,     spawn,          {.v = amixerup } },
-	{ MODKEY|ShiftMask,             XK_F11,    spawn,          {.v = brightnessdown } },
-	{ MODKEY|ShiftMask,             XK_F12,    spawn,          {.v = brightnessup } },
+	{ MODKEY|ShiftMask,             XK_F7,	   spawn,          {.v = brightnessdown } },
+	{ MODKEY|ShiftMask,             XK_F8,     spawn,          {.v = brightnessup } },
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = lock } },
+	{ MODKEY|ShiftMask,             XK_F12,      spawn,          {.v = scrot } },
+	{ MODKEY|ShiftMask,             XK_w,      spawn,          {.v = browser } },
+	{ MODKEY|ShiftMask,             XK_o,      spawn,          {.v = dmenubookmarks } },
+	{ MODKEY|ControlMask,           XK_o,      spawn,          {.v = dmenubookmarksnoscript } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
@@ -95,7 +104,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY,                       XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
-	{ MODKEY|ShiftMask,             XK_q,      killclient,     {0} },
+	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[0]} },
@@ -116,7 +125,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ShiftMask,             XK_x,      quit,           {0} },
+	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 };
 
 /* button definitions */
