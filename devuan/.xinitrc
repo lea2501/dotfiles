@@ -79,4 +79,4 @@ setxkbmap -layout latam -variant deadtilde
 #exec i3
 #exec ~/src/scripts/startdwm
 #exec dwm
-exec cwm
+exec openbsd-cwm
