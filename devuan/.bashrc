@@ -43,7 +43,7 @@ ALERT="${BWhite}${On_Red}" # Bold White on red background
 # Useful aliases
 alias c='clear'
 alias ..='cd ..'
-alias ls='ls -CF --color=auto'
+alias ll='ls -CF --color=auto'
 alias ll='ls -lisa --color=auto'
 alias mkdir='mkdir -pv'
 alias free='free -mt'
@@ -64,15 +64,17 @@ export ANDROID_HOME=/opt/android-sdk/
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools
 export BROWSER="surf -bdfgIS"
+
+# bash aliases
 if [ -f ~/.bash_aliases ]; then
   . ~/.bash_aliases
 fi
-if [ -f /usr/lib/bash-git-prompt/gitprompt.sh ]; then
+
+# bash git prompt
+if [ -f ~/src/bash-git-prompt/gitprompt.sh ]; then
     # To only show the git prompt in or under a repository directory
      GIT_PROMPT_ONLY_IN_REPO=1
     # To use upstream's default theme
      GIT_PROMPT_THEME=Default
-    # To use upstream's default theme, modified by arch maintainer
-    # GIT_PROMPT_THEME=Default_Arch
-    source /usr/lib/bash-git-prompt/gitprompt.sh
+    source ~/src/bash-git-prompt/gitprompt.sh
 fi

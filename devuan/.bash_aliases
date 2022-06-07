@@ -9,5 +9,5 @@ alias getBattPercent="upower -i /org/freedesktop/UPower/devices/battery_BAT0 | g
 alias getAudioMaster="amixer sget Master | grep 'Right:' | awk -F'[][]' '{print $2}'"
 alias dim="echo $(tput cols)x$(tput lines)"
 alias systemstats='echo "== Disks ==" && df -h && echo "== Memory ==" && free -h && echo "== CPU ==" && cat /proc/cpuinfo | grep "cpu MHz" && echo "== TEMP ==" && sensors | grep "°C"'
-alias ls='ls --color=auto -lahF'
+alias ll='ls --color=auto -lahF'
 alias mpvyt="mpv --ytdl-format='bestvideo[ext=mp4][height<=?720]+bestaudio[ext=m4a]'"

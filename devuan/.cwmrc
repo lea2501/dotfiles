@@ -51,8 +51,8 @@ bind-key	MS-Return			"st -f 'Dejavu sans mono:pixelsize=12:antialias=true:autohi
 bind-key	MCS-Return			"st -f 'Dejavu sans mono:pixelsize=32:antialias=true:autohint=false' -g 80x24"
 #bind-key	MS-Return			xterm -fa 'Monospace' -fs 20 +sb
 bind-key	MC-Return			"st -f 'Dejavu sans mono:pixelsize=24:antialias=true:autohint=false' -g 80x24"
-bind-key        MS-F5                           "amixer -q sset Master 5%-"
-bind-key        MS-F6                           "amixer -q sset Master 5%+"
+bind-key        MS-F5                           "pactl set-sink-volume 1 -5%"
+bind-key        MS-F6                           "pactl set-sink-volume 1 +5%"
 bind-key	MS-F11	        		"scrot"
 bind-key	MS-F12	        		"scrot -s -f"
 bind-key        MS-w                            "surf -bdfgIS www.startpage.com"
@@ -81,7 +81,7 @@ bind-key        MS-9                            window-movetogroup-9
 #bind-mouse	M-3				window-resize
 
 ## Windows
-borderwidth					2
+borderwidth					3
 color		activeborder			'#8f00ff'
 color		font				'#e53fe5'
 color		selfont				'#000000'
