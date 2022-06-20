@@ -3,7 +3,8 @@ xterm*utf8: 1
 
 ! Use a nice truetype font and size by default... 
 !xterm*faceName: monospace:pixelsize=14
-xterm*faceName: Liberation Mono:pixelsize=12:antialias=true:autohint=true
+xterm*faceName: Dejavu sans mono:pixelsize=12:antialias=true:autohint=false
+!xterm*faceName: Liberation Mono:pixelsize=12:antialias=true:autohint=true
 !XTerm*font: -*-terminus-medium-*-*-*-18-*-*-*-*-*-iso10646-1
 !xterm*font: -xos4-*-*-*-*-*-20-*-*-*-*-*-iso10646-1
 !xterm*faceName: DejaVu Sans Mono
@@ -54,7 +55,7 @@ xterm*color14: rgb:54/fc/fc
 xterm*color15: rgb:fc/fc/fc
 
 ! right hand side scrollbar...
-xterm*rightScrollBar: true
+xterm*rightScrollBar: false
 xterm*ScrollBar: false
 
 ! stop output to terminal from jumping down to bottom of scroll again

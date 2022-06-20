@@ -60,13 +60,10 @@ PATH="${HOME}/bin:${HOME}/.local/bin:${HOME}/src/scripts:${HOME}/script:${PATH}"
 # Set prompt
 PS1="${Yellow}\u@\h${NC}: ${Blue}\w${NC} \\$ "
 
-export ANDROID_HOME=/opt/android-sdk/
-export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
-export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools
-export BROWSER="surf -bdfgIS"
 if [ -f ~/.bash_aliases ]; then
   . ~/.bash_aliases
 fi
+
 if [ -f /usr/lib/bash-git-prompt/gitprompt.sh ]; then
     # To only show the git prompt in or under a repository directory
      GIT_PROMPT_ONLY_IN_REPO=1
@@ -76,3 +73,10 @@ if [ -f /usr/lib/bash-git-prompt/gitprompt.sh ]; then
     # GIT_PROMPT_THEME=Default_Arch
     source /usr/lib/bash-git-prompt/gitprompt.sh
 fi
+
+# android path
+export ANDROID_HOME=/opt/android-sdk/
+export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools
+
+PATH=$PATH:~/bin/

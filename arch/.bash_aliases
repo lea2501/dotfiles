@@ -11,3 +11,4 @@ alias dim="echo $(tput cols)x$(tput lines)"
 alias systemstats='echo "== Disks ==" && df -h && echo "== Memory ==" && free -h && echo "== CPU ==" && cat /proc/cpuinfo | grep "cpu MHz" && echo "== TEMP ==" && sensors | grep "°C"'
 alias ll='ls --color=auto -lahF'
 alias mpvyt="mpv --ytdl-format='bestvideo[ext=mp4][height<=?720]+bestaudio[ext=m4a]'"
+alias youtube-dl_getlist='sed -i "s/invidious.snopyta.org/www.youtube.com/g" ~/Downloads/youtube-dl.txt && yt-dlp -vci -N 1 -o "video-%(title)s-%(id)s.%(ext)s" -a ~/Downloads/youtube-dl.txt'

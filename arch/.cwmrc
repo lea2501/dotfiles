@@ -33,15 +33,15 @@ unbind-key      MC-x
 bind-key        MS-x                            window-close
 unbind-key      MC-m
 bind-key        MS-m                            window-maximize
-unbind-key	MS-w
-bind-key	MS-w				menu-window
+#unbind-key	MC-w
+#bind-key	MC-w				menu-window
 bind-key	MS-p				menu-exec
 unbind-key      MS-o
 bind-key        MS-o                            "./src/scripts/dmenu_bookmarks.sh"
 unbind-key      MC-o
 bind-key        MC-o                            "./src/scripts/dmenu_bookmarks_noscript.sh"
-unbind-key      MS-k
-bind-key        MS-k                            "passmenu -fn monospace:size=10 -nb '#000000' -nf '#ff00f0' -sb '#8f00ff' -sf '#eeeeee'"
+#unbind-key      MS-k
+#bind-key        MS-k                            "passmenu -fn monospace:size=10 -nb '#000000' -nf '#ff00f0' -sb '#8f00ff' -sf '#eeeeee'"
 
 unbind-key      M-Return
 unbind-key	MS-l
@@ -55,7 +55,10 @@ bind-key        MS-F5                           "amixer -q sset Master 5%-"
 bind-key        MS-F6                           "amixer -q sset Master 5%+"
 bind-key	MS-F11	        		"scrot"
 bind-key	MS-F12	        		"scrot -s -f"
-bind-key        MS-w                            "surf -bdfgIS www.startpage.com"
+unbind-key      MS-w
+bind-key        MS-w                            "firefox-esr -P default-esr"
+unbind-key      MC-w
+bind-key        MC-w                            "firefox-esr -P default-nojs"
 
 bind-key	4-1				group-only-1
 bind-key	4-2				group-only-2
