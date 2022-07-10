@@ -40,8 +40,8 @@ unbind-key      MS-o
 bind-key        MS-o                            "./src/scripts/dmenu_bookmarks.ksh"
 unbind-key      MC-o
 bind-key        MC-o                            "./src/scripts/dmenu_bookmarks_noscript.ksh"
-unbind-key      MS-k
-bind-key        MS-k                            "passmenu -fn monospace:size=10 -nb '#000000' -nf '#ff00f0' -sb '#8f00ff' -sf '#eeeeee'"
+#unbind-key      MS-k
+#bind-key        MS-k                            "passmenu -fn monospace:size=10 -nb '#000000' -nf '#ff00f0' -sb '#8f00ff' -sf '#eeeeee'"
 
 unbind-key      M-Return
 unbind-key	MS-l
@@ -55,7 +55,10 @@ bind-key        MS-F5                           "doas mixerctl outputs.master=-1
 bind-key        MS-F6                           "doas mixerctl outputs.master=+10"
 bind-key	MS-F11	        		"scrot"
 bind-key	MS-F12	        		"scrot -s -f"
-bind-key        MS-w                            "surf -bdfgIS www.startpage.com"
+unbind-key      MS-w
+bind-key        MS-w                            "firefox-esr -P default-esr"
+unbind-key      MC-w
+bind-key        MC-w                            "firefox-esr -P default-nojs"
 
 bind-key	4-1				group-only-1
 bind-key	4-2				group-only-2
@@ -67,15 +70,15 @@ bind-key	4-7				group-only-7
 bind-key	4-8				group-only-8
 bind-key	4-9				group-only-9
 
-bind-key        MS-1                            window-movetogroup-1
-bind-key        MS-2                            window-movetogroup-2
-bind-key        MS-3                            window-movetogroup-3
-bind-key        MS-4                            window-movetogroup-4
-bind-key        MS-5                            window-movetogroup-5
-bind-key        MS-6                            window-movetogroup-6
-bind-key        MS-7                            window-movetogroup-7
-bind-key        MS-8                            window-movetogroup-8
-bind-key        MS-9                            window-movetogroup-9
+bind-key        4S-1                            window-movetogroup-1
+bind-key        4S-2                            window-movetogroup-2
+bind-key        4S-3                            window-movetogroup-3
+bind-key        4S-4                            window-movetogroup-4
+bind-key        4S-5                            window-movetogroup-5
+bind-key        4S-6                            window-movetogroup-6
+bind-key        4S-7                            window-movetogroup-7
+bind-key        4S-8                            window-movetogroup-8
+bind-key        4S-9                            window-movetogroup-9
 
 #bind-mouse	M-2				window-lower
 #bind-mouse	M-3				window-resize
@@ -97,12 +100,15 @@ gap						5 5 0 0
 #ignore						"xconsole"
 #ignore						"termbar"
 
-#command		xterm				"xterm -fa 'Monospace' -fs 10 +sb"
-#command		xterm-big			"xterm -fa 'Monospace' -fs 20 +sb"
-command		firefox-esr			"firefox-esr"
+command		xterm				"xterm -fa 'Monospace' -fs 10 +sb"
+command		xterm-big			"xterm -fa 'Monospace' -fs 20 +sb"
+command         "firefox-esr -P default-esr"    "firefox-esr -P default-esr"
+command         "firefox-esr -P default-nojs"   "firefox-esr -P default-nojs"
 command		chromium			"chrome"
+command         keepassxc                       "keepassxc"
+command         intellij-idea-ce                "idea"
 command		slock				"slock"
 
 #moveamount					4
-snapdist					15
+snapdist					25
 sticky						yes

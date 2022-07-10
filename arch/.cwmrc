@@ -12,6 +12,7 @@ autogroup	2				"Navigator,Firefox"
 autogroup	3				"chromium,Chromium"
 autogroup	5				"jetbrains-idea-ce,jetbrains-idea-ce"
 autogroup	7				"JDownloader,JDownloader"
+autogroup       9                               "lutris,Lutris"
 
 # Add missing keybindings.
 #bind-key	C-Up				pointer-move-up
@@ -100,10 +101,14 @@ gap						5 5 0 0
 #ignore						"xconsole"
 #ignore						"termbar"
 
-#command		xterm				"xterm -fa 'Monospace' -fs 10 +sb"
-#command		xterm-big			"xterm -fa 'Monospace' -fs 20 +sb"
-command		firefox-esr			"firefox-esr"
+command		xterm				"xterm -fa 'Monospace' -fs 10 +sb"
+command		xterm-big			"xterm -fa 'Monospace' -fs 20 +sb"
+command		"firefox-esr -P default-esr"    "firefox-esr -P default-esr"
+command         "firefox-esr -P default-nojs"   "firefox-esr -P default-nojs"
 command		chromium			"chromium"
+command         keepassxc                       "keepassxc"
+command         intellij-idea-ce                "idea"
+command         JDownloader                     "JDownloader"
 command		slock				"slock"
 
 #moveamount					4
